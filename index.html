@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="img/Bunbunbun.png" sizes="32x32" type="image/png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,   initial-scale=1" />
+  <title>Quiz Race</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="menuScreen" class="menu-screen">
+  
+  <img src="img/QuizRace_Logo.png" class="menu-logo" alt="Quiz Race Logo">
+
+  <h1>Quiz Race</h1>
+
+  <button class="oneui-btn" onclick="startGame()">Jugar</button>
+  <button class="oneui-btn" onclick="showRules()">Reglas</button>
+  <button class="oneui-btn" onclick="showCredits()">Créditos</button>
+</div>
+
+<div id="rulesModal" class="modal">
+  <div class="modal-content">
+    <h2>- Reglas -</h2>
+    <p>- Oprime el botón lanzar dado, el dado consta del número 1 al 3</p>
+    <p>- Al momento de accionar el botón aparecerá una pregunta, contestala para avanzar</p>
+    <p>- La respuesta debe de ser unicamente el inciso, facilisimo, no? </p>
+    <p>- En caso de contestar correctamente la pregunta avanzaras de una manera aleatoria entre 1 a 3 casillas</p>
+    <p>- En caso de contestar erróneamente retrocederas de manera aleatoria entre 1 a 3 casillas, no te preocupes de los errores se aprenden</p>
+    <p>- Sigue contestando las preguntas para avanzar, una vez que llegues a la meta,¡ganarás! :D</p>
+    <p>- No olvides lo más importante, aprende y diviértete ^u^</p>
+    <button class="oneui-btn" onclick="closeModal('rulesModal')">Cerrar</button>
+  </div>
+</div>
+
+<div id="creditsModal" class="modal">
+  <div class="modal-content">
+    <h2>- Créditos -</h2>
+    <p>Eduardo Flores Salazar</p>
+    <p>Paola Valentina Castillo Martinez</p>
+    <p>Jana Sofía Morales Ramírez</p>
+    <p>Luis Esaú Galván santos</p>
+    <button class="oneui-btn" onclick="closeModal('creditsModal')">Cerrar</button>
+  </div>
+</div>
+
+
+  <div id="gameScreen" style="display:none;">
+
+  <h1>Quiz Race</h1>
+
+  <main class="game">
+    <section class="board-wrap">
+      <div id="board" class="board"></div>
+    </section>
+
+    <aside class="hud">
+      <div class="dice-box">
+        <div id="dice" class="dice">-</div>
+        <button id="rollBtn">Lanzar dado</button>
+      </div>
+
+      <div class="info">
+        <h2>Casilla actual</h2>
+        <div class="casilla-info">
+          <img id="casillaImg" src="img/placeholder.svg" alt="Casilla" />
+          <div id="casillaLabel">-</div>
+        </div>
+        <p id="mensaje"></p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+  </div> 
+</body>
+</html>
